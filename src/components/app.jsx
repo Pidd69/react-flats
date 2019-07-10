@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
 import flats from '../../data/flats';
 import FlatList from './flat_list';
 import Marker from './marker';
-import GoogleMapReact from 'google-map-react';
 
 class App extends Component {
   constructor(props) {
