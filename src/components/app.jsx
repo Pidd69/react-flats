@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import SimpleMap from 'google-map-react';
 
 import flats from '../../data/flats';
 import FlatList from './flat_list';
-//import Marker from './marker';
+import Marker from './marker';
+import GoogleMapReact from 'google-map-react';
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +34,9 @@ class App extends Component {
           selectFlat={this.selectFlat}
         />
         <div className="map-container">
-          <SimpleMap center={this.center()} zoom={12} />
+          <GoogleMapReact defaultCenter={this.center()} defaultZoom={12}>
+            <Marker lat={this.state.selectedFlat.lat} lng={this.state.selectedFlat.lng} />
+          </GoogleMapReact>
         </div>
       </div>
     );

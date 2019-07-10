@@ -2,7 +2,7 @@ import React from 'react';
 import Flat from './flat';
 
 const FlatList = (props) => {
-  console.log(props.flats);
+
   return (
     <div className="flat-list">
       {props.flats.map((flat, index) => (
